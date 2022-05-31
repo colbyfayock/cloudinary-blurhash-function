@@ -6,9 +6,8 @@ Use [BlurHash](https://blurha.sh/) to create beautiful placeholders for your ima
 
 ## 🚀 Getting Started
 
-* [Deploy this repository to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/colbyfayock/cloudinary-blurhash-function)
-* [Create a signed URL that references this remote function](#creating-a-signed-url)
-
+1. [Deploy this repository to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/colbyfayock/cloudinary-blurhash-function)
+1. [Generate a signed image URL that references this remote function](#creating-a-signed-url)
 
 ## 🧰 How to do X
 
