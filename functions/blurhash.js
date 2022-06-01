@@ -2,8 +2,13 @@ const MultipartParser = require('lambda-multipart-parser');
 const { encode, decode } = require('blurhash');
 const sharp = require('sharp');
 
-exports.handler = async (event, context, callback) => {
+exports.handler = async (event, context) => {
+  console.log('event', event);
+  console.log('context', context);
+
   const formdata = await MultipartParser.parse(event);
+
+  console.log('formdata', formdata);
 
   try {
     const { data, info } = await sharp(formdata.files[0].content)
