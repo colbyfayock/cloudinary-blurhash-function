@@ -3,12 +3,18 @@ const { encode, decode } = require('blurhash');
 const sharp = require('sharp');
 
 exports.handler = async (event, context) => {
-  console.log('event', event);
-  console.log('context', context);
+  console.log('<<< begin event')
+  console.log(event);
+  console.log('>>> end event')
+  console.log('<<< begin context')
+  console.log(context);
+  console.log('>>> end context')
 
   const formdata = await MultipartParser.parse(event);
 
-  console.log('formdata', formdata);
+  console.log('<<< begin formdata')
+  console.log(formdata);
+  console.log('>>> end formdata')
 
   try {
     const { data, info } = await sharp(formdata.files[0].content)

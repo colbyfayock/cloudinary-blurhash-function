@@ -14,7 +14,12 @@ const image = cloudinary.url(process.env.CLOUDINARY_IMAGE_PUBLIC_ID, {
   custom_function:{
     function_type: 'remote',
     source: process.env.NETLIFY_FUNCTION_ENDPOINT
-  }
+  },
+  transformation: [
+    {
+      flags: 'no_cache'
+    }
+  ]
 });
 
 console.log('<<< Image');
