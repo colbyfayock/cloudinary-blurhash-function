@@ -6,9 +6,8 @@ exports.handler = async (event, context) => {
   const formdata = await MultipartParser.parse(event);
 
   console.log('<<< begin event')
-  console.log(event.body);
+  // console.log(event.body);
   console.log(event.headers);
-  console.log(JSON.stringify(event));
   console.log('>>> end event')
 
   console.log('<<< begin context')
@@ -27,6 +26,11 @@ exports.handler = async (event, context) => {
         resolveWithObject: true
       });
 
+      console.log('<<< begin event')
+  // console.log(event.body);
+  console.log(event.headers);
+  console.log('>>> end event')
+
     const encoded = encode(new Uint8ClampedArray(data), info.width, info.height, 4, 4);
     const decoded = decode(encoded, info.width, info.height);
 
@@ -42,6 +46,10 @@ exports.handler = async (event, context) => {
         quality: 40,
       })
       .toBuffer();
+
+      console.log('<<< begin event')
+      console.log(JSON.stringify(event.body));
+      console.log('>>> end event')
 
     return {
       statusCode: 200,
