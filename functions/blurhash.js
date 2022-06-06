@@ -8,7 +8,7 @@ exports.handler = async (event, context) => {
   console.log('<<< begin event')
   console.log(event.body);
   console.log(event.headers);
-  console.log(JSON.stringify(event.headers));
+  console.log(JSON.stringify(event));
   console.log('>>> end event')
 
   console.log('<<< begin context')
