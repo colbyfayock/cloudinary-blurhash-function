@@ -3,14 +3,15 @@ const { encode, decode } = require('blurhash');
 const sharp = require('sharp');
 
 exports.handler = async (event, context) => {
-  console.log('<<< begin event')
-  console.log(event);
-  console.log('>>> end event')
+  const formdata = await MultipartParser.parse(event);
+
   console.log('<<< begin context')
   console.log(context);
   console.log('>>> end context')
 
-  const formdata = await MultipartParser.parse(event);
+  console.log('<<< begin event')
+  console.log(event);
+  console.log('>>> end event')
 
   console.log('<<< begin formdata')
   console.log(formdata);
